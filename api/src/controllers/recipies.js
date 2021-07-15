@@ -5,7 +5,7 @@ const { Recipe } = require('../db.js');
 const { v4: uuidv4 } = require('uuid');
 const { API_KEY, API_KEY_TWO } = require("../utils/config/index")
 
-const number = 10;
+const number = 99;
 function getAllRecipes(req, res, next) {
     if (!req.query.name) {
         const dbRecipes = Recipe.findAll();
