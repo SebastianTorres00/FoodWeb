@@ -6,7 +6,7 @@ function Landing() {
             <h1 className="h1">
 
                 {/* <Link to="/home">home</Link> */}
-                <a href="http://localhost:3000/home" className="h1-link">Home</a>
+                <a href="/home" className="h1-link">Home</a>
 
             </h1>
         </div>

@@ -1,5 +1,6 @@
 import { Fragment, useState } from "react"
 import { Link } from "react-router-dom";
+import axios from "axios"
 import "./create.css"
 
 
@@ -58,24 +59,20 @@ function Create() {
         // e.target.reset();
 
         alert(`${recipe.title} Creada`)
+
         try {
-            let config = {
+            const response = axios({
+                url: "/recetas/created",
                 method: "POST",
-                headers: {
-                    "Accept": "application/json",
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(recipe)
-            }
-            let res = await fetch("http://localhost:3001/recetas/created", config)
+                data: recipe
+            })
 
-
+            return response
         } catch (error) {
-            console.log(error)
+            alert("Hubo un error, comunicate con el creador de esta pagina, Sebastian Torres")
         }
     }
 
-    // console.log(recipe)
     return (
         <Fragment>
             <h1 className="h1-form-create">Crea tu comida</h1>

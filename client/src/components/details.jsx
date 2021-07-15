@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { IMG_ALT, RECIPES } from "../const";
+import { IMG_ALT } from "../const";
 import { Link } from "react-router-dom";
 import "../../src/components/recipes/detalles.css"
 function Details(props) {
@@ -9,7 +9,7 @@ function Details(props) {
     const [response, setResponse] = useState([])
 
     function getResponse() {
-        return axios.get(`${RECIPES}/${id}`)
+        return axios.get(`/recetas/${id}`)
             .then(recetas => setResponse(recetas.data))
     }
 
