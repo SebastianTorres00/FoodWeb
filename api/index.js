@@ -19,12 +19,9 @@
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
-const { PORT } = require("./src/utils/config/index")
 // Syncing all the models at once.
-conn.sync({ force: true })
-  .then(() => {
-    console.log("Base de datos conectada");
-    server.listen(PORT, () => {
-      console.log(`listening at ${PORT}`); // eslint-disable-line no-console
-    });
+conn.sync({ force: true }).then(() => {
+  server.listen(process.env.PORT, () => {
+    console.log("%s listening at 3000"); // eslint-disable-line no-console
   });
+});
