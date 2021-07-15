@@ -1,0 +1,838 @@
+.h1-form-create{
+    color: #fff;
+    font-family: 'Merriweather', serif;
+    text-align: center;
+    font-size: 40px;
+    margin-top: -100px;
+    position: absolute;
+    /* background-color: red; */
+    width: 500px;
+    height: 80px;
+
+   margin-left: 700px;
+   /* margin-bottom: 2000; */
+}
+
+.form-create-link{
+    position: absolute;
+    margin-top: -130px;
+    margin-left: -290px;
+    
+    background-color: rgb(238, 103, 103);
+
+        width: 220px;
+        height: 60px;
+        text-align: center;
+        border-radius: 20px;
+}
+.create-link{
+    text-decoration: none;
+    color: #fff;
+
+    /* margin-left: -150px;
+
+    margin-top: -150px; */
+}
+
+.form-create{
+    background-color: #fff;
+    width: 550px;
+    height: 670px;
+    margin-left: 400px;
+    margin-top: 180px;
+
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+}
+
+.form-create-img{
+    margin-left: 950px;
+    margin-top: -670px;
+    width: 550px;
+    height: 670px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    /* border-bottom-right-radius: 10px; */
+}
+
+.form-create-img-img{
+    background-image: url("../../../src/images/Fondo-Comida5.jpg");
+    width: 598px;
+    height: 670px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+.form-create-div-name{
+    /* background-color: rebeccapurple; */
+    width: 500px;
+    height: 80px;
+}
+
+.form-create-label-name {
+    margin-left: 20px;
+    margin-top: 20px;
+    
+    position: absolute;
+
+    font-size: 16px;
+}
+
+.form-create-input-name{
+    border-radius: 20px;
+    border: 0.1px solid rgba(128, 121, 121, 0.637);
+    
+    margin-top: 50px;
+    margin-left: 15px;
+
+
+    width: 250px;
+    height: 30px;
+
+    outline: none;
+
+}
+
+
+.form-create-div-image{
+    width: 500px;
+    height: 80px;
+    /* background-color: aqua  ; */
+}
+
+
+.form-create-label-image{
+    margin-left: 20px;
+    margin-top: 20px;
+    
+    position: absolute;
+
+    font-size: 16px;
+}
+
+.form-create-input-image{
+    border-radius: 20px;
+    border: 0.1px solid rgba(128, 121, 121, 0.637);
+    
+    margin-top: 50px;
+    margin-left: 15px;
+
+
+    width: 450px;
+    height: 30px;
+
+    outline: none;
+
+}
+
+
+
+.form-create-div-resume-plato{
+    width: 500px;
+    height: 80px;
+}
+
+
+.form-create-label-resume{
+    margin-left: 20px;
+    margin-top: 20px;
+    
+    position: absolute;
+
+    font-size: 16px;
+}
+
+
+.form-create-input-resume{
+    border-radius: 20px;
+    border: 0.1px solid rgba(128, 121, 121, 0.637);
+    
+    margin-top: 50px;
+    margin-left: 15px;
+
+
+    width: 350px;
+    height: 30px;
+
+    outline: none;
+
+}
+
+
+.form-create-div-points-plato{
+    width: 500px;
+    height: 80px;
+}
+
+
+.form-create-label-point{
+    margin-left: 20px;
+    margin-top: 20px;
+    
+    position: absolute;
+
+    font-size: 16px;
+}
+
+.form-create-input-points{
+    border-radius: 20px;
+    border: 0.1px solid rgba(128, 121, 121, 0.637);
+    
+    margin-top: 50px;
+    margin-left: 15px;
+
+
+    width: 150px;
+    height: 30px;
+
+    outline: none;
+
+    
+}
+
+
+.form-create-div-healt-plato{
+    width: 500px;
+    height: 80px;
+}
+
+.form-create-label-healt{
+    margin-left: 20px;
+    margin-top: 20px;
+    
+    position: absolute;
+
+    font-size: 16px;
+}
+
+.form-create-input-healt {
+    border-radius: 20px;
+    border: 0.1px solid rgba(128, 121, 121, 0.637);
+    
+    margin-top: 50px;
+    margin-left: 15px;
+
+
+    width: 150px;
+    height: 30px;
+
+    outline: none;
+
+}
+
+
+.select-div-form-create{
+    width: 550px;
+    height: 60px;
+    /* background-color: aqua; */
+}
+
+.form-create-label-señect{
+    margin-left: 20px;
+    margin-top: -20px;
+    
+    position: absolute;
+
+    font-size: 16px;
+}
+.all-select-div{
+    margin-top: 50px;
+}
+
+.select-option{
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 12px;
+    /* background-color: red; */
+    outline: none;
+
+}
+
+
+.tex-area{
+    margin-top: 50px;
+    margin-left: 10px;
+
+    border-radius: 20px;
+
+    outline: none;
+    text-indent: 15px;
+}
+
+.btn-text-area{
+    width: 80px;
+    height: 50px;
+
+    margin-left: 10px;
+    margin-top: 50px;
+    position: absolute;
+
+    border-radius: 20px;
+    border: 0.1px solid rgba(128, 121, 121, 0.637);
+}
+
+
+
+
+@media only screen and (max-width : 1600px){
+    .h1-form-create{
+        color: #fff;
+        font-family: 'Merriweather', serif;
+        text-align: center;
+        font-size: 40px;
+        margin-top: -100px;
+        position: absolute;
+        /* background-color: red; */
+        width: 500px;
+        height: 80px;
+    
+       margin-left: 520px;
+       /* margin-bottom: 2000; */
+    }
+    
+    .form-create-link{
+        position: absolute;
+        margin-top: -130px;
+        margin-left: -100px;
+        
+        /* background-color: aqua; */
+        background-color: rgb(238, 103, 103);
+
+        width: 220px;
+        height: 60px;
+        text-align: center;
+        border-radius: 20px;
+    }
+    .create-link{
+        text-decoration: none;
+        color: #fff;
+    
+        /* margin-left: -150px;
+    
+        margin-top: -150px; */
+    }
+    
+    .form-create{
+        background-color: #fff;
+        width: 550px;
+        height: 670px;
+        margin-left: 200px;
+        margin-top: 180px;
+    
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    
+    }
+    
+    .form-create-img{
+        margin-left: 753px;
+        margin-top: -670px;
+        width: 550px;
+        height: 670px;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        /* border-bottom-right-radius: 10px; */
+    }
+    
+    .form-create-img-img{
+        background-image: url("../../../src/images/Fondo-Comida5.jpg");
+        width: 598px;
+        height: 670px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    
+    
+    .form-create-div-name{
+        /* background-color: rebeccapurple; */
+        width: 500px;
+        height: 80px;
+    }
+    
+    .form-create-label-name {
+        margin-left: 20px;
+        margin-top: 20px;
+        
+        position: absolute;
+    
+        font-size: 16px;
+    }
+    
+    .form-create-input-name{
+        border-radius: 20px;
+        border: 0.1px solid rgba(128, 121, 121, 0.637);
+        
+        margin-top: 50px;
+        margin-left: 15px;
+    
+    
+        width: 250px;
+        height: 30px;
+    
+        outline: none;
+    
+    }
+    
+    
+    .form-create-div-image{
+        width: 500px;
+        height: 80px;
+        /* background-color: aqua  ; */
+    }
+    
+    
+    .form-create-label-image{
+        margin-left: 20px;
+        margin-top: 20px;
+        
+        position: absolute;
+    
+        font-size: 16px;
+    }
+    
+    .form-create-input-image{
+        border-radius: 20px;
+        border: 0.1px solid rgba(128, 121, 121, 0.637);
+        
+        margin-top: 50px;
+        margin-left: 15px;
+    
+    
+        width: 450px;
+        height: 30px;
+    
+        outline: none;
+    
+    }
+    
+    
+    
+    .form-create-div-resume-plato{
+        width: 500px;
+        height: 80px;
+    }
+    
+    
+    .form-create-label-resume{
+        margin-left: 20px;
+        margin-top: 20px;
+        
+        position: absolute;
+    
+        font-size: 16px;
+    }
+    
+    
+    .form-create-input-resume{
+        border-radius: 20px;
+        border: 0.1px solid rgba(128, 121, 121, 0.637);
+        
+        margin-top: 50px;
+        margin-left: 15px;
+    
+    
+        width: 350px;
+        height: 30px;
+    
+        outline: none;
+    
+    }
+    
+    
+    .form-create-div-points-plato{
+        width: 500px;
+        height: 80px;
+    }
+    
+    
+    .form-create-label-point{
+        margin-left: 20px;
+        margin-top: 20px;
+        
+        position: absolute;
+    
+        font-size: 16px;
+    }
+    
+    .form-create-input-points{
+        border-radius: 20px;
+        border: 0.1px solid rgba(128, 121, 121, 0.637);
+        
+        margin-top: 50px;
+        margin-left: 15px;
+    
+    
+        width: 150px;
+        height: 30px;
+    
+        outline: none;
+    
+        
+    }
+    
+    
+    .form-create-div-healt-plato{
+        width: 500px;
+        height: 80px;
+    }
+    
+    .form-create-label-healt{
+        margin-left: 20px;
+        margin-top: 20px;
+        
+        position: absolute;
+    
+        font-size: 16px;
+    }
+    
+    .form-create-input-healt {
+        border-radius: 20px;
+        border: 0.1px solid rgba(128, 121, 121, 0.637);
+        
+        margin-top: 50px;
+        margin-left: 15px;
+    
+    
+        width: 150px;
+        height: 30px;
+    
+        outline: none;
+    
+    }
+    
+    
+    .select-div-form-create{
+        width: 550px;
+        height: 60px;
+        /* background-color: aqua; */
+    }
+    
+    .form-create-label-señect{
+        margin-left: 20px;
+        margin-top: -20px;
+        
+        position: absolute;
+    
+        font-size: 16px;
+    }
+    .all-select-div{
+        margin-top: 50px;
+    }
+    
+    .select-option{
+        margin-left: 10px;
+        margin-top: 10px;
+        border-radius: 12px;
+        /* background-color: red; */
+        outline: none;
+    
+    }
+    
+    
+    .tex-area{
+        margin-top: 50px;
+        margin-left: 10px;
+    
+        border-radius: 20px;
+    
+        outline: none;
+        text-indent: 15px;
+    }
+    
+    .btn-text-area{
+        width: 80px;
+        height: 50px;
+    
+        margin-left: 10px;
+        margin-top: 50px;
+        position: absolute;
+    
+        border-radius: 20px;
+        border: 0.1px solid rgba(128, 121, 121, 0.637);
+    }
+    
+
+}
+
+
+@media only screen and (max-width : 1350px) {
+    .h1-form-create{
+        color: #fff;
+        font-family: 'Merriweather', serif;
+        text-align: center;
+        font-size: 40px;
+        margin-top: -100px;
+        position: absolute;
+        /* background-color: red; */
+        width: 500px;
+        height: 80px;
+    
+       margin-left: 400px;
+       /* margin-bottom: 2000; */
+    }
+    
+    .form-create-link{
+        position: absolute;
+        margin-top: -130px;
+        margin-left: -60px;
+        
+        /* background-color: aqua; */
+        background-color: rgb(238, 103, 103);
+
+        width: 220px;
+        height: 60px;
+        text-align: center;
+        border-radius: 20px;
+    }
+    .create-link{
+        text-decoration: none;
+        color: #fff;
+    
+        /* margin-left: -150px;
+    
+        margin-top: -150px; */
+    }
+    
+    .form-create{
+        background-color: #fff;
+        width: 550px;
+        height: 670px;
+        margin-left: 100px;
+        margin-top: 180px;
+    
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    
+    }
+    
+    .form-create-img{
+        margin-left: 653px;
+        margin-top: -670px;
+        width: 550px;
+        height: 670px;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        /* border-bottom-right-radius: 10px; */
+    }
+    
+    .form-create-img-img{
+        background-image: url("../../../src/images/Fondo-Comida5.jpg");
+        width: 598px;
+        height: 670px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    
+    
+    .form-create-div-name{
+        /* background-color: rebeccapurple; */
+        width: 500px;
+        height: 80px;
+    }
+    
+    .form-create-label-name {
+        margin-left: 20px;
+        margin-top: 20px;
+        
+        position: absolute;
+    
+        font-size: 16px;
+    }
+    
+    .form-create-input-name{
+        border-radius: 20px;
+        border: 0.1px solid rgba(128, 121, 121, 0.637);
+        
+        margin-top: 50px;
+        margin-left: 15px;
+    
+    
+        width: 250px;
+        height: 30px;
+    
+        outline: none;
+    
+    }
+    
+    
+    .form-create-div-image{
+        width: 500px;
+        height: 80px;
+        /* background-color: aqua  ; */
+    }
+    
+    
+    .form-create-label-image{
+        margin-left: 20px;
+        margin-top: 20px;
+        
+        position: absolute;
+    
+        font-size: 16px;
+    }
+    
+    .form-create-input-image{
+        border-radius: 20px;
+        border: 0.1px solid rgba(128, 121, 121, 0.637);
+        
+        margin-top: 50px;
+        margin-left: 15px;
+    
+    
+        width: 450px;
+        height: 30px;
+    
+        outline: none;
+    
+    }
+    
+    
+    
+    .form-create-div-resume-plato{
+        width: 500px;
+        height: 80px;
+    }
+    
+    
+    .form-create-label-resume{
+        margin-left: 20px;
+        margin-top: 20px;
+        
+        position: absolute;
+    
+        font-size: 16px;
+    }
+    
+    
+    .form-create-input-resume{
+        border-radius: 20px;
+        border: 0.1px solid rgba(128, 121, 121, 0.637);
+        
+        margin-top: 50px;
+        margin-left: 15px;
+    
+    
+        width: 350px;
+        height: 30px;
+    
+        outline: none;
+    
+    }
+    
+    
+    .form-create-div-points-plato{
+        width: 500px;
+        height: 80px;
+    }
+    
+    
+    .form-create-label-point{
+        margin-left: 20px;
+        margin-top: 20px;
+        
+        position: absolute;
+    
+        font-size: 16px;
+    }
+    
+    .form-create-input-points{
+        border-radius: 20px;
+        border: 0.1px solid rgba(128, 121, 121, 0.637);
+        
+        margin-top: 50px;
+        margin-left: 15px;
+    
+    
+        width: 150px;
+        height: 30px;
+    
+        outline: none;
+    
+        
+    }
+    
+    
+    .form-create-div-healt-plato{
+        width: 500px;
+        height: 80px;
+    }
+    
+    .form-create-label-healt{
+        margin-left: 20px;
+        margin-top: 20px;
+        
+        position: absolute;
+    
+        font-size: 16px;
+    }
+    
+    .form-create-input-healt {
+        border-radius: 20px;
+        border: 0.1px solid rgba(128, 121, 121, 0.637);
+        
+        margin-top: 50px;
+        margin-left: 15px;
+    
+    
+        width: 150px;
+        height: 30px;
+    
+        outline: none;
+    
+    }
+    
+    
+    .select-div-form-create{
+        width: 550px;
+        height: 60px;
+        /* background-color: aqua; */
+    }
+    
+    .form-create-label-señect{
+        margin-left: 20px;
+        margin-top: -20px;
+        
+        position: absolute;
+    
+        font-size: 16px;
+    }
+    .all-select-div{
+        margin-top: 50px;
+    }
+    
+    .select-option{
+        margin-left: 10px;
+        margin-top: 10px;
+        border-radius: 12px;
+        /* background-color: red; */
+        outline: none;
+    
+    }
+    
+    
+    .tex-area{
+        margin-top: 50px;
+        margin-left: 10px;
+    
+        border-radius: 20px;
+    
+        outline: none;
+        text-indent: 15px;
+    }
+    
+    .btn-text-area{
+        width: 80px;
+        height: 50px;
+    
+        margin-left: 10px;
+        margin-top: 50px;
+        position: absolute;
+    
+        border-radius: 20px;
+        border: 0.1px solid rgba(128, 121, 121, 0.637);
+    }
+    
+
+}
