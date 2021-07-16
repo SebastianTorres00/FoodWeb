@@ -128,7 +128,7 @@ function Recipes() {
                     <button onClick={page} value="10" className="btn-pag">10</button>
                 </form>
             </div>
-            {console.log(recipe)}
+            {/* {console.log(recipe)} */}
             {
 
                 typeof recipe !== 'string' ? recipe.map((receta) => {
