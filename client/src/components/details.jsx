@@ -12,14 +12,9 @@ function Details(props) {
         return axios.get(`/recetas/${id}`)
             .then(recetas => setResponse(recetas.data))
     }
-    // replace(/(<([^>]+)>)/ig, '')
-    // console.log(response.instructions.replace(/(<([^>]+)>)/ig, ''));
-    if (response.instructions !== undefined) {
-        let info = response.instructions.replace(/(<([^>]+)>)/ig, '')
-    } else {
-        let info = response.instructions
-    }
-    // response.instructions
+
+
+
     useEffect(() => {
         getResponse()
     }, [])
@@ -34,10 +29,10 @@ function Details(props) {
                 <h1 className="h1-title-detalles">{response.title}</h1>
                 <h2 className="h3-dieta-detalles">Dieta :  {response.diets}</h2>
                 <h2 className="h3-plato-detalles">Plato:  {response.dishTypes}</h2>
-                <h3 className="p-resumen-detalles">{response.summary !== undefined ? response.summary.replace(/(<([^>]+)>)/ig, '') : response.summary}</h3>
+                <h3 className="p-resumen-detalles">{response.summary !== undefined ? response.summary.replace(/(<([^>]+)>)/ig, '') : null} </h3>
                 <h1 className="h1-puntos-detalles">Puntacion :  {response.spoonacularScore}</h1>
                 <h2 className="h2-lvl">Nivel de comida saludable : {response.healthScore}</h2>
-                <p className="p-intru-detalle">Detalles : {response.instructions !== undefined ? response.instructions.replace(/(<([^>]+)>)/ig, '') : response.instructions}</p>
+                <p className="p-intru-detalle">Detalles : {response.instructions && response.instructions.replace(/(<([^>]+)>)/ig, '')} No se han encontrado</p>
             </div>
         </div>
     )

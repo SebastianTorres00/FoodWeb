@@ -21,6 +21,7 @@ function Recipes() {
     const dispatch = useDispatch()
     let recipe = useSelector(store => store.recipes)
 
+    console.log("Linea 24", recipe)
     const [num, setNum] = useState(1)
 
     const page = (e) => {
@@ -94,8 +95,6 @@ function Recipes() {
 
 
 
-
-
     const callRecipes = e => {
         e.preventDefault();
         dispatch(getRecipes())
@@ -114,6 +113,7 @@ function Recipes() {
             <form onSubmit={callRecipes} className="form-btn-all-recipes">
                 <button type="submit" className="btn-all-recipes">Todas las recetas</button>
             </form>
+
             <div>
                 <form className="form-pag">
                     <button onClick={page} value="1" className="btn-pag">1</button>
@@ -130,11 +130,7 @@ function Recipes() {
             </div>
             {
 
-
-
-
-
-                recipe ? recipe.map((receta) => {
+                typeof recipe !== 'string' ? recipe.map((receta) => {
                     return (
 
                         receta === null ? <h1>ERROR</h1> : <div key={receta.id} className="card">
@@ -155,7 +151,7 @@ function Recipes() {
                         </div>
 
                     )
-                }) : <h1>No se ha encontrado comidas. Tal vez hiciste algo mal, o tal vez no ... O tal vez si</h1>
+                }) : <div className="xd"><h1>asdasdasdasd</h1></div>
             }
             <div>
                 <form className="form-pag">
