@@ -137,7 +137,7 @@ function Recipes() {
                 recipe ? recipe.map((receta) => {
                     return (
 
-                        receta === null ? null : <div key={receta.id} className="card">
+                        receta === null ? <h1>ERROR</h1> : <div key={receta.id} className="card">
                             <div id="div-two">
 
                                 <img src={receta.image} alt={IMG_ALT} className="card-image" />
