@@ -29,10 +29,10 @@ function Details(props) {
                 <h1 className="h1-title-detalles">{response.title}</h1>
                 <h2 className="h3-dieta-detalles">Dieta :  {response.diets}</h2>
                 <h2 className="h3-plato-detalles">Plato:  {response.dishTypes}</h2>
-                <h3 className="p-resumen-detalles">{response.summary && response.summary.replace(/(<([^>]+)>)/ig, '')} No se han encontrado </h3>
+                {/* <h3 className="p-resumen-detalles">{response.summary && response.summary.replace(/(<([^>]+)>)/ig, '')} No se han encontrado </h3> */}
                 <h1 className="h1-puntos-detalles">Puntacion :  {response.spoonacularScore}</h1>
                 <h2 className="h2-lvl">Nivel de comida saludable : {response.healthScore}</h2>
-                <p className="p-intru-detalle">Detalles : {response.instructions && response.instructions.replace(/(<([^>]+)>)/ig, '')} No se han encontrado</p>
+                {/* <p className="p-intru-detalle">Detalles : {response.instructions && response.instructions.replace(/(<([^>]+)>)/ig, '')} No se han encontrado</p> */}
             </div>
         </div>
     )
