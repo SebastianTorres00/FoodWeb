@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import RecipesForm from "./form-recipes";
 import "./index.css"
 import "../../../src/all.css"
+import ReactPlayer from "react-player";
 function Recipes() {
     //Inicio Paginado
 
@@ -152,7 +153,10 @@ function Recipes() {
                         </div>
 
                     )
-                }) : <div className="xd"><h1>asdasdasdasd</h1></div>
+                }) : <div className="xd"><ReactPlayer
+                    url={require}
+
+                /></div>
             }
             <div>
                 <form className="form-pag">

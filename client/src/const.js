@@ -1,4 +1,4 @@
-export const BASE_URL = "http://localhost:3001"
+export const BASE_URL = "http://localhost:3002"
 export const RECIPES = BASE_URL + "/recetas"
 export const TYPES = BASE_URL + "/types"
 
