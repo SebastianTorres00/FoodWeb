@@ -40,7 +40,7 @@ export const formTypeDites = (selectChange) => (dispach) => {
     axios.get(`/recetas`)
         .then(response => {
             let respond = response.data
-            console.log(respond.diets)
+
             let dieta = respond.filter(data => data.diets.find(x => x === selectChange))
 
             if (dieta.length === 0) {
@@ -53,6 +53,11 @@ export const formTypeDites = (selectChange) => (dispach) => {
             dispach({
                 type: FORM_TYPE_DIETS,
                 payload: dieta
+            })
+        }).catch(err => {
+            dispach({
+                type: ALERT_ERROR,
+                payload: alert("Hubo un error con la receta recientemente creada.")
             })
         })
 }
@@ -112,7 +117,10 @@ export const orderAbc = (abc, selectChange, search) => (dispach) => {
                     return
                 }
             }).catch(err => {
-                console.log(err);
+                dispach({
+                    type: ALERT_ERROR,
+                    payload: alert("Hubo un error.")
+                })
             })
 
         return
@@ -162,7 +170,10 @@ export const orderAbc = (abc, selectChange, search) => (dispach) => {
 
 
             }).catch(err => {
-                console.log(err);
+                dispach({
+                    type: ALERT_ERROR,
+                    payload: alert("Hubo un error.")
+                })
             })
     }
 
@@ -210,7 +221,10 @@ export const orderAbc = (abc, selectChange, search) => (dispach) => {
             }
 
         }).catch(error => {
-            console.log(error)
+            dispach({
+                type: ALERT_ERROR,
+                payload: alert("Hubo un error.")
+            })
         })
     // dispach({
     //     type: ORDER_ABC,
@@ -226,6 +240,9 @@ export const orderScore = (score, abc, selectChange, search) => (dispach) => {
         axios.get(`/recetas`)
             .then(response => {
                 let respond = response.data
+
+
+
 
                 let dieta = respond.filter((data, i) => data.diets.find(x => x === selectChange))
 
@@ -274,7 +291,10 @@ export const orderScore = (score, abc, selectChange, search) => (dispach) => {
                     return
                 }
             }).catch(err => {
-                console.log(err);
+                dispach({
+                    type: ALERT_ERROR,
+                    payload: alert("Hubo un error.")
+                })
             })
 
         return
@@ -370,6 +390,9 @@ export const orderScore = (score, abc, selectChange, search) => (dispach) => {
             }
 
         }).catch(error => {
-            console.log(error)
+            dispach({
+                type: ALERT_ERROR,
+                payload: alert("Hubo un error.")
+            })
         })
 }

@@ -22,7 +22,7 @@ function Recipes() {
     const dispatch = useDispatch()
     let recipe = useSelector(store => store.recipes)
 
-    console.log("Linea 24", recipe)
+    // console.log("Linea 24", recipe)
     const [num, setNum] = useState(1)
 
     const page = (e) => {
@@ -129,13 +129,12 @@ function Recipes() {
                     <button onClick={page} value="10" className="btn-pag">10</button>
                 </form>
             </div>
-            {/* {console.log(recipe)} */}
-            {
 
+            {
                 typeof recipe !== 'string' ? recipe.map((receta) => {
                     return (
 
-                        receta === null ? <h1>ERROR</h1> : <div key={receta.id} className="card">
+                        <div key={receta.id} className="card">
                             <div id="div-two">
 
                                 <img src={receta.image} alt={IMG_ALT} className="card-image" />
@@ -153,10 +152,11 @@ function Recipes() {
                         </div>
 
                     )
-                }) : <div className="xd"><ReactPlayer
-                    url={require}
+                }) : (<div className="span-dat"><h1>aaaaaaaaasd</h1></div>)
+                // <ReactPlayer
+                //     url={require}
 
-                /></div>
+                // />
             }
             <div>
                 <form className="form-pag">
