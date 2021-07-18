@@ -1,4 +1,6 @@
 import axios from "axios"
+import { RECIPES } from "../../const"
+// import { search } from "../../components/recipes/form-recipes.jsx"
 export const GET_RECIPES = "GET_RECIPES"
 export const FORM_RECIPES = "FORM_RECIPES"
 export const FORM_TYPE_DIETS = "FORM_TYPE_DIETS"
@@ -8,7 +10,7 @@ export const ORDER_SCORE = "ORDER_SCORE"
 
 export const getRecipes = () => (dispach) => {
 
-    axios.get("/recetas")
+    axios.get(RECIPES)
         .then(recetas => {
             dispach({
                 type: GET_RECIPES,
@@ -23,7 +25,7 @@ export const getRecipes = () => (dispach) => {
 
 export const formRecipes = (search) => (dispach) => {
 
-    return axios.get(`/recetas/?name=${search}`)
+    return axios.get(`${RECIPES}/?name=${search}`)
         .then(res => {
             dispach({
                 type: FORM_RECIPES,
@@ -37,7 +39,7 @@ export const formRecipes = (search) => (dispach) => {
 
 export const formTypeDites = (selectChange) => (dispach) => {
 
-    axios.get(`/recetas`)
+    axios.get(`${RECIPES}`)
         .then(response => {
             let respond = response.data
 
@@ -54,11 +56,6 @@ export const formTypeDites = (selectChange) => (dispach) => {
                 type: FORM_TYPE_DIETS,
                 payload: dieta
             })
-        }).catch(err => {
-            dispach({
-                type: ALERT_ERROR,
-                payload: alert("Hubo un error con la receta recientemente creada.")
-            })
         })
 }
 
@@ -66,7 +63,7 @@ export const formTypeDites = (selectChange) => (dispach) => {
 export const orderAbc = (abc, selectChange, search) => (dispach) => {
     if (selectChange === "gluten free" || selectChange === "ketogenic" || selectChange === "vegetarian" || selectChange === "lacto ovo vegetarian" || selectChange === "vegan" || selectChange === "pescetarian" || selectChange === "paleo" || selectChange === "primal" || selectChange === "whole30") {
 
-        axios.get(`/recetas`)
+        axios.get(`${RECIPES}`)
             .then(response => {
                 let respond = response.data
 
@@ -117,17 +114,14 @@ export const orderAbc = (abc, selectChange, search) => (dispach) => {
                     return
                 }
             }).catch(err => {
-                dispach({
-                    type: ALERT_ERROR,
-                    payload: alert("Hubo un error.")
-                })
+                console.log(err);
             })
 
         return
     }
 
     if (search) {
-        return axios.get(`/recetas/?name=${search}`)
+        return axios.get(`${RECIPES}/?name=${search}`)
             .then(res => {
                 let dieta = res.data
 
@@ -170,17 +164,14 @@ export const orderAbc = (abc, selectChange, search) => (dispach) => {
 
 
             }).catch(err => {
-                dispach({
-                    type: ALERT_ERROR,
-                    payload: alert("Hubo un error.")
-                })
+                console.log(err);
             })
     }
 
 
 
 
-    axios.get("/recetas")
+    axios.get(RECIPES)
         .then(recetas => {
             let dieta = recetas.data
 
@@ -221,10 +212,7 @@ export const orderAbc = (abc, selectChange, search) => (dispach) => {
             }
 
         }).catch(error => {
-            dispach({
-                type: ALERT_ERROR,
-                payload: alert("Hubo un error.")
-            })
+            console.log(error)
         })
     // dispach({
     //     type: ORDER_ABC,
@@ -237,12 +225,9 @@ export const orderAbc = (abc, selectChange, search) => (dispach) => {
 export const orderScore = (score, abc, selectChange, search) => (dispach) => {
     if (selectChange === "gluten free" || selectChange === "ketogenic" || selectChange === "vegetarian" || selectChange === "lacto ovo vegetarian" || selectChange === "vegan" || selectChange === "pescetarian" || selectChange === "paleo" || selectChange === "primal" || selectChange === "whole30") {
 
-        axios.get(`/recetas`)
+        axios.get(`${RECIPES}`)
             .then(response => {
                 let respond = response.data
-
-
-
 
                 let dieta = respond.filter((data, i) => data.diets.find(x => x === selectChange))
 
@@ -291,10 +276,7 @@ export const orderScore = (score, abc, selectChange, search) => (dispach) => {
                     return
                 }
             }).catch(err => {
-                dispach({
-                    type: ALERT_ERROR,
-                    payload: alert("Hubo un error.")
-                })
+                console.log(err);
             })
 
         return
@@ -302,7 +284,7 @@ export const orderScore = (score, abc, selectChange, search) => (dispach) => {
 
 
     if (search) {
-        return axios.get(`/recetas/?name=${search}`)
+        return axios.get(`${RECIPES}/?name=${search}`)
             .then(res => {
                 let dieta = res.data
 
@@ -349,7 +331,7 @@ export const orderScore = (score, abc, selectChange, search) => (dispach) => {
 
 
 
-    axios.get("/recetas")
+    axios.get(RECIPES)
         .then(recetas => {
             let dieta = recetas.data
 
@@ -390,9 +372,6 @@ export const orderScore = (score, abc, selectChange, search) => (dispach) => {
             }
 
         }).catch(error => {
-            dispach({
-                type: ALERT_ERROR,
-                payload: alert("Hubo un error.")
-            })
+            console.log(error)
         })
 }

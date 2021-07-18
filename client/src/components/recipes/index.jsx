@@ -8,7 +8,6 @@ import { Link } from "react-router-dom";
 import RecipesForm from "./form-recipes";
 import "./index.css"
 import "../../../src/all.css"
-import ReactPlayer from "react-player";
 function Recipes() {
     //Inicio Paginado
 
@@ -22,7 +21,6 @@ function Recipes() {
     const dispatch = useDispatch()
     let recipe = useSelector(store => store.recipes)
 
-    // console.log("Linea 24", recipe)
     const [num, setNum] = useState(1)
 
     const page = (e) => {
@@ -96,6 +94,8 @@ function Recipes() {
 
 
 
+
+
     const callRecipes = e => {
         e.preventDefault();
         dispatch(getRecipes())
@@ -114,7 +114,6 @@ function Recipes() {
             <form onSubmit={callRecipes} className="form-btn-all-recipes">
                 <button type="submit" className="btn-all-recipes">Todas las recetas</button>
             </form>
-
             <div>
                 <form className="form-pag">
                     <button onClick={page} value="1" className="btn-pag">1</button>
@@ -129,12 +128,11 @@ function Recipes() {
                     <button onClick={page} value="10" className="btn-pag">10</button>
                 </form>
             </div>
-
             {
                 typeof recipe !== 'string' ? recipe.map((receta) => {
                     return (
 
-                        <div key={receta.id} className="card">
+                        receta === null ? null : <div key={receta.id} className="card">
                             <div id="div-two">
 
                                 <img src={receta.image} alt={IMG_ALT} className="card-image" />
@@ -152,11 +150,7 @@ function Recipes() {
                         </div>
 
                     )
-                }) : (<div className="span-dat"><h1>aaaaaaaaasd</h1></div>)
-                // <ReactPlayer
-                //     url={require}
-
-                // />
+                }) : <h1>No se ha encontrado comidas. Tal vez hiciste algo mal, o tal vez no ... O tal vez si</h1>
             }
             <div>
                 <form className="form-pag">

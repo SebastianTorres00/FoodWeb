@@ -1,19 +1,17 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { IMG_ALT } from "../const";
+import { IMG_ALT, RECIPES } from "../const";
 import { Link } from "react-router-dom";
 import "../../src/components/recipes/detalles.css"
 function Details(props) {
     let id = props.match.match.params.id
-    // console.log(props.match.match.params.id);
+    console.log(props.match.match.params.id);
     const [response, setResponse] = useState([])
 
     function getResponse() {
-        return axios.get(`/recetas/${id}`)
+        return axios.get(`${RECIPES}/${id}`)
             .then(recetas => setResponse(recetas.data))
     }
-
-
 
     useEffect(() => {
         getResponse()
@@ -29,7 +27,7 @@ function Details(props) {
                 <h1 className="h1-title-detalles">{response.title}</h1>
                 <h2 className="h3-dieta-detalles">Dieta :  {response.diets}</h2>
                 <h2 className="h3-plato-detalles">Plato:  {response.dishTypes}</h2>
-                <h3 className="p-resumen-detalles">{response.summary && response.summary.replace(/(<([^>]+)>)/ig, '')} No se han encontrado </h3>
+                <h3 className="p-resumen-detalles">{response.summary !== undefined ? response.summary.replace(/(<([^>]+)>)/ig, '') : <h1>No se ha encontrado</h1>} </h3>
                 <h1 className="h1-puntos-detalles">Puntacion :  {response.spoonacularScore}</h1>
                 <h2 className="h2-lvl">Nivel de comida saludable : {response.healthScore}</h2>
                 <p className="p-intru-detalle">Detalles : {response.instructions && response.instructions.replace(/(<([^>]+)>)/ig, '')} No se han encontrado</p>

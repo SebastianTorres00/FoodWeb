@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import { formRecipes, formTypeDites, orderAbc, orderScore } from "../../store/actions/recipesActions"
 import { useDispatch } from "react-redux";
 import axios from "axios";
+import { TYPES } from "../../const";
 import "./form-recipes.css"
 
 
@@ -29,7 +30,7 @@ export function RecipesForm() {
     const [selectChange, setSelectChange] = useState("")
 
     useEffect(() => {
-        axios.get("/types")
+        axios.get(TYPES)
             .then(response => {
                 setDiets(response.data)
             })

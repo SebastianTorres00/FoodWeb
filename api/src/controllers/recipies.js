@@ -3,13 +3,13 @@
 const axios = require("axios")
 const { Recipe } = require('../db.js');
 const { v4: uuidv4 } = require('uuid');
-const { API_KEY_TWO, API_KEY } = require("../utils/config/index")
+const { API_KEY, API_KEY_TWO } = require("../utils/config/index")
 
-const number = 99;
+const number = 10;
 function getAllRecipes(req, res, next) {
     if (!req.query.name) {
         const dbRecipes = Recipe.findAll();
-        const apiRecipes = axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=23123123123123123124asdas123&number=${number}&addRecipeInformation=true`);
+        const apiRecipes = axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=asdasdasdas&number=${number}&addRecipeInformation=true`);
         Promise.all([dbRecipes, apiRecipes])
             .then((result) => {
                 const [myRecipesResult, apiRecipesResult] = result
@@ -18,11 +18,11 @@ function getAllRecipes(req, res, next) {
                 );
                 return res.status(200).json(response)
             })
-            .catch(err => next(err))
+            .catch(err => res.send("Error volve pronto"))
     } else {
         let { name } = req.query
         const dbRecipes = Recipe.findAll();
-        const apiRecipes = axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=23123123123123123124asdas123&number=${number}&addRecipeInformation=true&query=${name}`);
+        const apiRecipes = axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=asdasdasd&number=${number}&addRecipeInformation=true&query=${name}`);
 
         console.log(name);
         Promise.all([dbRecipes, apiRecipes])
@@ -44,7 +44,7 @@ function getAllRecipes(req, res, next) {
                     return res.status(200).json(recipes)
                 }
             })
-            .catch(err => next(err))
+            .catch(err => { res.send("Error , volve pronto") })
 
     }
 }
