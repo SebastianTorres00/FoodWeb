@@ -8,15 +8,10 @@ import { Link } from "react-router-dom";
 import RecipesForm from "./form-recipes";
 import "./index.css"
 import "../../../src/all.css"
+import ReactPlayer from "react-player";
+
+
 function Recipes() {
-    //Inicio Paginado
-
-
-
-
-
-
-    //Fin paginado
 
     const dispatch = useDispatch()
     let recipe = useSelector(store => store.recipes)
@@ -128,10 +123,20 @@ function Recipes() {
                     <button onClick={page} value="10" className="btn-pag">10</button>
                 </form>
             </div>
+            {/* {console.log(recipe, "receta")} */}
             {
-                typeof recipe !== 'string' ? recipe.map((receta) => {
+                typeof recipe === 'string' || recipe === [] || recipe.length === 0 ? <div className="video">
+                    <h1 className="text-video">Se han acabado las peticiones a la api, te recomiendo ver este video para saber su funcionalidad con normalidad.</h1>
+                    <ReactPlayer
+                        url="https://www.youtube.com/watch?v=j4XQg1PL2wM"
+                        width="600px"
+                        height="400px"
+                        controls
+                        playing
+                        muted
+                    />
+                </div> : recipe.map((receta) => {
                     return (
-
                         receta === null ? null : <div key={receta.id} className="card">
                             <div id="div-two">
 
@@ -150,10 +155,10 @@ function Recipes() {
                         </div>
 
                     )
-                }) : <h1>No se ha encontrado comidas. Tal vez hiciste algo mal, o tal vez no ... O tal vez si</h1>
+                })
             }
             <div>
-                <form className="form-pag">
+                <form className="form-pag-down">
                     <button onClick={page} value="1" className="btn-pag">1</button>
                     <button onClick={page} value="2" className="btn-pag">2</button>
                     <button onClick={page} value="3" className="btn-pag">3</button>

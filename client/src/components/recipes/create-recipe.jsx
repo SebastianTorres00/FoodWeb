@@ -14,7 +14,7 @@ function Create() {
         aggregateLikes: 0,
         healthScore: 0,
         instructions: "",
-        diets: ""
+        diets: []
     })
     const handleSubmit = e => {
         e.preventDefault();
@@ -25,28 +25,31 @@ function Create() {
         e.target.reset();
     }
     const handleChange = e => {
-        // 
-        // e.target.value
-        console.log(recipe.diets)
+
+        let data = []
         if (e.target.name === "diets") {
-            if (recipe.diets !== "") {
-                let data = `${recipe.diets}, ${e.target.value}`
+            if (recipe.diets.length === 0) {
                 setRecipe({
                     ...recipe,
-                    [e.target.name]: data
+                    [e.target.name]: [e.target.value]
                 })
                 return
             }
+            data.push(...recipe.diets)
+            data.push(e.target.value)
             setRecipe({
                 ...recipe,
-                [e.target.name]: e.target.value
+                [e.target.name]: data
             })
+            return
+            // }
         }
         setRecipe({
             ...recipe,
             [e.target.name]: e.target.value
         })
     }
+
 
 
     async function handle() {
@@ -112,7 +115,7 @@ function Create() {
 
                         <select name="diets" onChange={handleChange} className="select-option">
                             <option value="">Seleccione</option>
-                            <option value="gluten">gluten</option>
+                            <option value="gluten free">gluten free</option>
                         </select>
                         <select onChange={handleChange} name="diets" className="select-option">
                             <option value="">Seleccione</option>
