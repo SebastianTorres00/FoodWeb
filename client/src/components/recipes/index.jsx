@@ -126,7 +126,7 @@ function Recipes() {
                 </form>
             </div>
             {
-                typeof recipe === 'string' || recipe[0] === [] || recipe.length === 0 ?
+                typeof recipe === 'string' || recipe === [] || recipe.length === 0 ?
                     <div className="video">
                         <h1 className="text-video">Se han acabado las peticiones a la api, te recomiendo ver este video para saber su funcionalidad con normalidad.</h1>
                         <ReactPlayer
