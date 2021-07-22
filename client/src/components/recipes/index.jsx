@@ -16,6 +16,8 @@ function Recipes() {
     const dispatch = useDispatch()
     let recipe = useSelector(store => store.recipes)
 
+
+    let data = recipe
     const [num, setNum] = useState(1)
 
     const page = (e) => {
@@ -95,8 +97,15 @@ function Recipes() {
         e.preventDefault();
         dispatch(getRecipes())
     }
+    const paginado = Math.floor(data.length / 10)
+
+    const arr = []
+    for (let i = 1; i <= paginado; i++) {
+        arr.push(i)
+    }
 
     return (
+
 
         <div className="cards">
 
@@ -111,64 +120,50 @@ function Recipes() {
             </form>
             <div>
                 <form className="form-pag">
-                    <button onClick={page} value="1" className="btn-pag">1</button>
-                    <button onClick={page} value="2" className="btn-pag">2</button>
-                    <button onClick={page} value="3" className="btn-pag">3</button>
-                    <button onClick={page} value="4" className="btn-pag">4</button>
-                    <button onClick={page} value="5" className="btn-pag">5</button>
-                    <button onClick={page} value="6" className="btn-pag">6</button>
-                    <button onClick={page} value="7" className="btn-pag">7</button>
-                    <button onClick={page} value="8" className="btn-pag">8</button>
-                    <button onClick={page} value="9" className="btn-pag">9</button>
-                    <button onClick={page} value="10" className="btn-pag">10</button>
+                    {arr.map(i => {
+                        return <button onClick={page} value={i} className="btn-pag">{i}</button>
+                    })}
                 </form>
             </div>
-            {/* {console.log(recipe, "receta")} */}
             {
-                typeof recipe === 'string' || recipe === [] || recipe.length === 0 ? <div className="video">
-                    <h1 className="text-video">Se han acabado las peticiones a la api, te recomiendo ver este video para saber su funcionalidad con normalidad.</h1>
-                    <ReactPlayer
-                        url="https://www.youtube.com/watch?v=j4XQg1PL2wM"
-                        width="600px"
-                        height="400px"
-                        controls
-                        playing
-                        muted
-                    />
-                </div> : recipe.map((receta) => {
-                    return (
-                        receta === null ? null : <div key={receta.id} className="card">
-                            <div id="div-two">
+                typeof recipe === 'string' || recipe[0] === [] || recipe.length === 0 ?
+                    <div className="video">
+                        <h1 className="text-video">Se han acabado las peticiones a la api, te recomiendo ver este video para saber su funcionalidad con normalidad.</h1>
+                        <ReactPlayer
+                            url="https://www.youtube.com/watch?v=j4XQg1PL2wM"
+                            width="600px"
+                            height="400px"
+                            controls
+                            playing
+                            muted
+                        />
+                    </div> : recipe.map((receta) => {
+                        return (
+                            receta === null ? null : <div key={receta.id} className="card">
+                                <div id="div-two">
 
-                                <img src={receta.image} alt={IMG_ALT} className="card-image" />
-                                {
-                                    receta.title === null ? <h2 className="card-title">Titulo : No se encuentra titulo disponible</h2> : <h1 className="card-title"> {receta.title}</h1>
-                                }
-                                {
-                                    receta.diets.length < 1 ? <h2 className="card-dieta"> Dieta : No se encuentra dieta disponible</h2> : <h2 className="card-dieta">Dieta: {receta.diets}</h2>
-                                }
-                                <div className="link-detalles">
-                                    <Link className="link" to={`/home/details/${receta.id}`} >Detalles</Link>
+                                    <img src={receta.image} alt={IMG_ALT} className="card-image" />
+                                    {
+                                        receta.title === null ? <h2 className="card-title">Titulo : No se encuentra titulo disponible</h2> : <h1 className="card-title"> {receta.title}</h1>
+                                    }
+                                    {
+                                        receta.diets.length < 1 ? <h2 className="card-dieta"> Dieta : No se encuentra dieta disponible</h2> : <h2 className="card-dieta">Dieta: {receta.diets}</h2>
+                                    }
+                                    <div className="link-detalles">
+                                        <Link className="link" to={`/home/details/${receta.id}`} >Detalles</Link>
+                                    </div>
+
                                 </div>
-
                             </div>
-                        </div>
 
-                    )
-                })
+                        )
+                    })
             }
             <div>
-                <form className="form-pag-down">
-                    <button onClick={page} value="1" className="btn-pag">1</button>
-                    <button onClick={page} value="2" className="btn-pag">2</button>
-                    <button onClick={page} value="3" className="btn-pag">3</button>
-                    <button onClick={page} value="4" className="btn-pag">4</button>
-                    <button onClick={page} value="5" className="btn-pag">5</button>
-                    <button onClick={page} value="6" className="btn-pag">6</button>
-                    <button onClick={page} value="7" className="btn-pag">7</button>
-                    <button onClick={page} value="8" className="btn-pag">8</button>
-                    <button onClick={page} value="9" className="btn-pag">9</button>
-                    <button onClick={page} value="10" className="btn-pag">10</button>
+                <form className="form-pag">
+                    {arr.map(i => {
+                        return <button onClick={page} value={i} className="btn-pag">{i}</button>
+                    })}
                 </form>
             </div>
         </div >
